@@ -1,0 +1,13 @@
+import google.generativeai as genai
+import os
+
+api_key = "AIzaSyA9IfFHNPMaM4ndCV0PGu2BgBZxJnIhX1U"
+genai.configure(api_key=api_key)
+
+print("Listing models...")
+try:
+    for m in genai.list_models():
+        if 'generateContent' in m.supported_generation_methods:
+            print(f"Name: {m.name}")
+except Exception as e:
+    print(f"Error: {e}")

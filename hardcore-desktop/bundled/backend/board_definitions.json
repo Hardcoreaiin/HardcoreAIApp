@@ -1,0 +1,186 @@
+{
+    "arduino_nano": {
+        "type": "arduino",
+        "platformio": {
+            "platform": "atmelavr",
+            "board": "nanoatmega328",
+            "framework": "arduino",
+            "upload_protocol": "arduino"
+        },
+        "pins": {
+            "D0": {
+                "gpio": 0,
+                "function": [
+                    "RX"
+                ]
+            },
+            "D1": {
+                "gpio": 1,
+                "function": [
+                    "TX"
+                ]
+            },
+            "A0": {
+                "adc": 0
+            },
+            "PWM": [
+                "D3",
+                "D5",
+                "D6",
+                "D9",
+                "D10",
+                "D11"
+            ]
+        }
+    },
+    "arduino_uno": {
+        "type": "arduino",
+        "platformio": {
+            "platform": "atmelavr",
+            "board": "uno",
+            "framework": "arduino",
+            "upload_protocol": "arduino"
+        },
+        "pins": {
+            "D0": {
+                "gpio": 0,
+                "function": [
+                    "RX"
+                ]
+            },
+            "D1": {
+                "gpio": 1,
+                "function": [
+                    "TX"
+                ]
+            },
+            "A0": {
+                "adc": 0
+            },
+            "PWM": [
+                "D3",
+                "D5",
+                "D6",
+                "D9",
+                "D10",
+                "D11"
+            ]
+        }
+    },
+    "arduino_mega": {
+        "type": "arduino",
+        "platformio": {
+            "platform": "atmelavr",
+            "board": "megaatmega2560",
+            "framework": "arduino",
+            "upload_protocol": "wiring"
+        },
+        "pins": {
+            "D0": {
+                "gpio": 0,
+                "function": [
+                    "RX"
+                ]
+            },
+            "D1": {
+                "gpio": 1,
+                "function": [
+                    "TX"
+                ]
+            },
+            "A0": {
+                "adc": 0
+            },
+            "PWM": [
+                "D2",
+                "D3",
+                "D4",
+                "D5",
+                "D6",
+                "D7",
+                "D8",
+                "D9",
+                "D10",
+                "D11",
+                "D12",
+                "D13"
+            ]
+        }
+    },
+    "esp32": {
+        "type": "esp32",
+        "platformio": {
+            "platform": "espressif32",
+            "board": "esp32dev",
+            "framework": "arduino",
+            "upload_speed": 921600
+        },
+        "pins": {
+            "GPIO2": {
+                "gpio": 2
+            },
+            "GPIO4": {
+                "gpio": 4
+            },
+            "PWM": [
+                "GPIO2",
+                "GPIO4",
+                "GPIO12",
+                "GPIO13",
+                "GPIO14",
+                "GPIO15"
+            ]
+        }
+    },
+    "stm32_f401re": {
+        "type": "stm32",
+        "platformio": {
+            "platform": "ststm32",
+            "board": "nucleo_f401re",
+            "framework": "arduino",
+            "upload_protocol": "stlink"
+        },
+        "pins": {
+            "PA0": {
+                "adc": 0
+            },
+            "PA1": {
+                "adc": 1
+            },
+            "PB6": {
+                "i2c": "SCL"
+            },
+            "PB7": {
+                "i2c": "SDA"
+            },
+            "PWM": [
+                "PA0",
+                "PA1"
+            ]
+        }
+    },
+    "rp2040": {
+        "type": "rp2040",
+        "platformio": {
+            "platform": "raspberrypi",
+            "board": "pico",
+            "framework": "arduino",
+            "upload_protocol": "picotool"
+        },
+        "pins": {
+            "GPIO0": {
+                "gpio": 0
+            },
+            "GPIO1": {
+                "gpio": 1
+            },
+            "ADC0": {
+                "adc": 0
+            },
+            "PWM": [
+                "GPIO0",
+                "GPIO1"
+            ]
+        }
+    }
+}

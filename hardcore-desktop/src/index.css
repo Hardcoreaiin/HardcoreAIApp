@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #0a0a0a;
+    color: #fafafa;
+    -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #404040;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #525252;
+}
+
+*:focus {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: 2px solid #525252;
+    outline-offset: 2px;
+}
+
+::selection {
+    background: #404040;
+    color: white;
+}
+
+input,
+select,
+textarea {
+    background-color: #171717;
+    border: 1px solid #262626;
+    color: #e5e5e5;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #525252;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #404040;
+}
+
+button {
+    transition: all 0.15s ease;
+}

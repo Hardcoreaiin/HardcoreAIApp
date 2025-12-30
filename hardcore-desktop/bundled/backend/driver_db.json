@@ -1,0 +1,30 @@
+{
+    "0x2341": {
+        "0x0043": {
+            "name": "Arduino Uno",
+            "driver_url": "https://downloads.arduino.cc/arduino-drivers/ArduinoUSBDriver.exe"
+        },
+        "0x0010": {
+            "name": "Arduino Mega",
+            "driver_url": "https://downloads.arduino.cc/arduino-drivers/ArduinoUSBDriver.exe"
+        }
+    },
+    "0x0483": {
+        "0x5740": {
+            "name": "STM32 Nucleo F401RE",
+            "driver_url": "https://www.st.com/content/st_com/en/products/development-tools/stm32-utilities/stsw-stm32080.html"
+        }
+    },
+    "0x2E8A": {
+        "0x000A": {
+            "name": "Raspberry Pi Pico",
+            "driver_url": "https://github.com/raspberrypi/pico-sdk/releases/download/1.5.0/pico-sdk-1.5.0.zip"
+        }
+    },
+    "0x1A86": {
+        "0x7523": {
+            "name": "Arduino Nano",
+            "driver_url": "http://www.wch-ic.com/downloads/CH341SER_EXE.html"
+        }
+    }
+}

@@ -1,0 +1,147 @@
+{
+    "name": "hardcore-desktop",
+    "version": "1.0.2",
+    "description": "Hardcore.ai - Cursor for Hardware",
+    "main": "dist-electron/main/index.js",
+    "author": "Hardcore.ai",
+    "license": "MIT",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "electron:dev": "npm run dev",
+        "electron:build": "npm run build && electron-builder",
+        "package:win": "npm run build && electron-builder --win",
+        "package:mac": "npm run build && electron-builder --mac",
+        "package:linux": "npm run build && electron-builder --linux",
+        "package:all": "npm run build && electron-builder --win --mac --linux",
+        "postinstall": "electron-builder install-app-deps"
+    },
+    "dependencies": {
+        "@monaco-editor/react": "^4.7.0",
+        "@serialport/parser-readline": "^13.0.0",
+        "electron-store": "^11.0.2",
+        "lucide-react": "^0.561.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-error-boundary": "^6.0.0",
+        "react-resizable-panels": "^3.0.6",
+        "serialport": "^13.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.6",
+        "@types/react": "^18.3.27",
+        "@types/react-dom": "^18.3.7",
+        "@vitejs/plugin-react": "^4.2.1",
+        "autoprefixer": "^10.4.16",
+        "concurrently": "^8.2.2",
+        "electron": "^28.3.3",
+        "electron-builder": "^24.9.1",
+        "postcss": "^8.4.32",
+        "tailwindcss": "^3.4.0",
+        "typescript": "^5.3.3",
+        "vite": "^5.0.11",
+        "vite-plugin-electron": "^0.28.2",
+        "vite-plugin-electron-renderer": "^0.14.5",
+        "wait-on": "^7.2.0"
+    },
+    "build": {
+        "appId": "com.hardcore.ai",
+        "productName": "Hardcore.ai",
+        "directories": {
+            "output": "dist",
+            "buildResources": "assets"
+        },
+        "asarUnpack": [
+            "**/*.node",
+            "**/node_modules/serialport/**/*",
+            "**/node_modules/@serialport/**/*"
+        ],
+        "files": [
+            "dist-electron/**/*",
+            "dist-react/**/*",
+            "bundled/**/*"
+        ],
+        "extraResources": [
+            {
+                "from": "bundled/python",
+                "to": "python",
+                "filter": [
+                    "**/*"
+                ]
+            },
+            {
+                "from": "bundled/backend",
+                "to": "backend",
+                "filter": [
+                    "**/*"
+                ]
+            },
+            {
+                "from": "bundled/drivers",
+                "to": "drivers",
+                "filter": [
+                    "**/*"
+                ]
+            }
+        ],
+        "win": {
+            "target": [
+                {
+                    "target": "nsis",
+                    "arch": [
+                        "x64"
+                    ]
+                }
+            ],
+            "artifactName": "${productName}-Setup-${version}.${ext}"
+        },
+        "nsis": {
+            "oneClick": false,
+            "allowToChangeInstallationDirectory": true,
+            "createDesktopShortcut": true,
+            "createStartMenuShortcut": true,
+            "deleteAppDataOnUninstall": false,
+            "runAfterFinish": true
+        },
+        "mac": {
+            "target": [
+                {
+                    "target": "dmg",
+                    "arch": [
+                        "x64",
+                        "arm64"
+                    ]
+                },
+                {
+                    "target": "zip",
+                    "arch": [
+                        "x64",
+                        "arm64"
+                    ]
+                }
+            ],
+            "artifactName": "${productName}-${version}-${arch}.${ext}",
+            "category": "public.app-category.developer-tools"
+        },
+        "linux": {
+            "target": [
+                {
+                    "target": "AppImage",
+                    "arch": [
+                        "x64"
+                    ]
+                },
+                {
+                    "target": "deb",
+                    "arch": [
+                        "x64"
+                    ]
+                }
+            ],
+            "artifactName": "${productName}-${version}-${arch}.${ext}",
+            "category": "Development"
+        },
+        "publish": null
+    }
+}

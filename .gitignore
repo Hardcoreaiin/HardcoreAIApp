@@ -1,0 +1,92 @@
+# Hardcore.ai - Desktop App
+
+## Node/Electron
+node_modules/
+dist/
+dist-react/
+dist-electron/
+build/
+*.exe
+*.dmg
+*.AppImage
+*.deb
+*.rpm
+*.snap
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+.eggs/
+*.egg
+
+# IDE
+.idea/
+*.swp
+*.swo
+.vscode/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Test files
+test_*.py
+test_*.js
+*.test.*
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*~
+
+# Build artifacts
+bundled/python/
+bundled/drivers/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Development scripts (not needed for users)
+add_*.py
+fix_*.py
+implement_*.py
+create_*.py
+debug_*.js
+*_final.py
+
+# Rendered outputs
+*.kicad_sch
+
+# Deployment configs (backend specific)
+netlify.toml
+vercel.json
+render.yaml
+
+# Lock files (users will regenerate)
+# package-lock.json
+
+# Duplicate/old files
+package-simple.json
+README_UPDATED.md
+UI-DEMO.html
+installer.nsi
